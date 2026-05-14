@@ -1,0 +1,40 @@
+name: rupiah_detector
+description: Sistem Identifikasi Mata Uang Rupiah untuk Tunanetra
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Kamera
+  camera: ^0.10.5+9
+
+  # Model TFLite
+  tflite_flutter: ^0.10.4
+
+  # Text-to-Speech Bahasa Indonesia
+  flutter_tts: ^3.8.5
+
+  # Manipulasi gambar
+  image: ^4.1.7
+
+  # Izin kamera
+  permission_handler: ^11.1.0
+
+  # Utilitas path
+  path_provider: ^2.1.2
+  path: ^1.8.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/model/rupiah_model.tflite
+    - assets/model/labels.txt
