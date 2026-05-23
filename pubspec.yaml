@@ -3,7 +3,7 @@ description: Sistem Identifikasi Mata Uang Rupiah untuk Tunanetra
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.0.0 <4.0.0'
+  sdk: ">=3.0.0 <4.0.0"
 
 dependencies:
   flutter:
@@ -12,8 +12,7 @@ dependencies:
   # Kamera
   camera: ^0.10.5+9
 
-  # Model TFLite
-  tflite_flutter: ^0.10.4
+  tflite_flutter: 0.12.1 # Atau versi stabil di atasnya yang tersedia
 
   # Text-to-Speech Bahasa Indonesia
   flutter_tts: ^3.8.5
@@ -36,5 +35,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/model/rupiah_model.tflite
+    - ../ml_training/output/rupiah_model.tflite
     - assets/model/labels.txt
