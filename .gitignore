@@ -1,45 +1,47 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
+# =========================
+# Root project ignores
+# =========================
+
+# OS / editor
 .DS_Store
-.atom/
-.build/
-.buildlog/
-.history
-.svn/
-.swiftpm/
-migrate_working_dir/
+Thumbs.db
+.vscode/*.log
 
-# IntelliJ related
-*.iml
-*.ipr
-*.iws
-.idea/
+# Python virtual environments
+.venv/
+venv/
+env/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
-#.vscode/
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
 
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-.dart_tool/
-.flutter-plugins-dependencies
-.pub-cache/
-.pub/
-/build/
-/coverage/
+# Jupyter
+.ipynb_checkpoints/
 
-# Symbolication related
-app.*.symbols
+# =========================
+# ML training generated / downloadable artifacts
+# =========================
+ml_training/dataset/processed/
+ml_training/output/
+ml_training/dataset/raw/
+ml_training/.fiftyone/
+ml_training/zoo/
+ml_training/downloads/
 
-# Obfuscation related
-app.*.map.json
+# =========================
+# Flutter build artifacts (if root git tracks full repo)
+# =========================
+app/.dart_tool/
+app/.flutter-plugins-dependencies
+app/build/
+app/.idea/
+app/android/.gradle/
+app/android/local.properties
+app/pubspec.lock
 
-# Android Studio will place build artifacts here
-/android/app/debug
-/android/app/profile
-/android/app/release
+# Optional local model assets in app (generated from ml_training output)
+# Uncomment if you don't want model binaries committed
+# app/assets/model/rupiah_model.tflite
+# app/assets/model/labels.txt

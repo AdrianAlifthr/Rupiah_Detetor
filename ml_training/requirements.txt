@@ -1,0 +1,47 @@
+# =============================================================================
+# requirements.txt — Python Dependencies untuk ML Training
+#
+# CARA INSTALL:
+#   Mac Intel          : pip3 install -r requirements.txt
+#   Mac Apple Silicon  : pip3 install tensorflow-macos tensorflow-metal
+#                        pip3 install pillow numpy matplotlib seaborn scikit-learn kaggle tqdm
+#
+# =============================================================================
+# requirements.txt — Dependencies untuk ML Training
+# =============================================================================
+# Install dengan perintah:
+#   pip install -r requirements.txt
+#
+# Catatan untuk Mac M1/M2/M3 (Apple Silicon):
+#   Ganti tensorflow dengan tensorflow-macos + tensorflow-metal
+#   untuk memanfaatkan GPU Apple:
+#
+#   pip install tensorflow-macos tensorflow-metal
+#
+# =============================================================================
+
+# Core ML framework
+tensorflow>=2.17.0
+
+# Untuk manipulasi gambar
+Pillow>=10.0.0
+
+# Untuk komputasi array (dipakai tensorflow juga)
+numpy>=1.24.0
+
+# Untuk visualisasi grafik
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Untuk laporan evaluasi model
+scikit-learn>=1.3.0
+
+# Untuk download dataset background (Open Images)
+fiftyone>=0.24.0
+
+# Untuk Jupyter Notebook (opsional, jika mau interaktif)
+jupyter>=1.0.0
+notebook>=7.0.0
+
+# Progress bar yang lebih bagus
+tqdm>=4.65.0

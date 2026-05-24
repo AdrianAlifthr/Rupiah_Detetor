@@ -55,7 +55,6 @@ class _CameraFrameOverlayState extends State<CameraFrameOverlay>
   @override
   Widget build(BuildContext context) {
     final screenW = MediaQuery.of(context).size.width;
-    final screenH = MediaQuery.of(context).size.height;
 
     // Lebar bingkai = 80% lebar layar
     final frameW = screenW * 0.80;
@@ -160,7 +159,8 @@ class _FrameCornerPainter extends CustomPainter {
     canvas.drawLine(Offset(size.width, 0), Offset(size.width, len), paint);
 
     // ── Sudut kiri bawah ──
-    canvas.drawLine(Offset(0, size.height - len), Offset(0, size.height), paint);
+    canvas.drawLine(
+        Offset(0, size.height - len), Offset(0, size.height), paint);
     canvas.drawLine(Offset(0, size.height), Offset(len, size.height), paint);
 
     // ── Sudut kanan bawah ──

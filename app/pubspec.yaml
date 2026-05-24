@@ -35,5 +35,5 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - ../ml_training/output/rupiah_model.tflite
+    - assets/model/rupiah_model.tflite
     - assets/model/labels.txt

@@ -50,7 +50,6 @@ class _AppRoot extends StatefulWidget {
 
 class _AppRootState extends State<_AppRoot> {
   bool _ready = false;
-  String? _error;
 
   @override
   Widget build(BuildContext context) {

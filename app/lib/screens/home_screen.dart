@@ -210,7 +210,7 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
 
           // ── Layer 1: Preview kamera ──
           camReady
-              ? CameraPreview(_camCtrl!)
+              ? _buildCameraPreview()
               : _buildNoCameraPlaceholder(),
 
           // ── Layer 2: Overlay gelap di tepi (vignette) ──
@@ -258,6 +258,23 @@ class _HomeScreenState extends State<HomeScreen> with WidgetsBindingObserver {
               style: TextStyle(color: AppTheme.textHint, fontSize: 14),
             ),
           ],
+        ),
+      ),
+    );
+  }
+
+  Widget _buildCameraPreview() {
+    final controller = _camCtrl!;
+    return ClipRect(
+      child: OverflowBox(
+        alignment: Alignment.center,
+        child: FittedBox(
+          fit: BoxFit.cover,
+          child: SizedBox(
+            width: controller.value.previewSize?.height ?? 1,
+            height: controller.value.previewSize?.width ?? 1,
+            child: CameraPreview(controller),
+          ),
         ),
       ),
     );
